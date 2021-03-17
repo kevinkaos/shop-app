@@ -2,21 +2,23 @@ import React, { useState, useEffect } from "react";
 import { Image, StyleSheet, Dimensions, View, ScrollView } from "react-native";
 import Swiper from "react-native-swiper/src";
 
-const { width } = Dimensions.get("window");
+var { width } = Dimensions.get("window");
 
 const Banner = () => {
   const [bannerData, setBannerData] = useState([]);
+
   useEffect(() => {
     setBannerData([
-      "https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk",
-      "https://i.picsum.photos/id/1004/5616/3744.jpg?hmac=Or7EJnz-ky5bsKa9_frdDcDCR9VhCP8kMnbZV6-WOrY",
-      "https://i.picsum.photos/id/1008/5616/3744.jpg?hmac=906z84ml4jhqPMsm4ObF9aZhCRC-t2S_Sy0RLvYWZwY",
+      "https://images.vexels.com/media/users/3/126443/preview2/ff9af1e1edfa2c4a46c43b0c2040ce52-macbook-pro-touch-bar-banner.jpg",
+      "https://pbs.twimg.com/media/D7P_yLdX4AAvJWO.jpg",
+      "https://www.yardproduct.com/blog/wp-content/uploads/2016/01/gardening-banner.jpg",
     ]);
 
     return () => {
       setBannerData([]);
     };
   }, []);
+
   return (
     <ScrollView>
       <View style={styles.container}>
